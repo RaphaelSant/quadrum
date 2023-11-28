@@ -35,6 +35,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
       title: Text('PokeDex'),
+      backgroundColor: Colors.blue,
     ),
     body: Padding(
       padding: EdgeInsets.all(16.0),
@@ -45,7 +46,7 @@ class _HomePageState extends State<HomePage> {
           TextField(
             controller: _pokemonController,
             decoration: InputDecoration(
-              labelText: 'Enter Pokemon name or ID',
+              labelText: 'Insira o nome ou ID do Pokemon',
             ),
           ),
           SizedBox(height: 20.0),
@@ -53,7 +54,7 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               fetchPokemon(_pokemonController.text.toLowerCase());
             },
-            child: Text('Search'),
+            child: Text('Procurar'),
           ),
           SizedBox(height: 20.0),
           _pokemonName.isNotEmpty
